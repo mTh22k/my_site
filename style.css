@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #000000;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    /* Container do carrossel */
+
+    /* Container do carrossel */
+    .carousel {
+      position: relative;
+      width: 400px; /* Largura do carrossel */
+      height: 400px; /* Altura do carrossel (igual à largura para imagens quadradas) */
+      margin: auto;
+      overflow: hidden;
+      background-color: #6e4b4b00; /* Adiciona um fundo para garantir visibilidade dos botões */
+    }
+
+    /* Imagens do carrossel */
+    .carousel img {
+      width: 400px; /* Largura das imagens */
+      height: 400px; /* Altura das imagens (igual à largura para manter o formato quadrado) */
+      display: none;
+      object-fit: cover; /* Ajusta o tamanho da imagem para preencher o contêiner */
+    }
+
+    /* Radio buttons para controle do carrossel */
+    .carousel input[type="radio"] {
+      display: none;
+    }
+
+    /* Exibir a imagem correspondente ao radio button selecionado */
+    #img1:checked ~ .slides #slide1,
+    #img2:checked ~ .slides #slide2,
+    #img3:checked ~ .slides #slide3 {
+      display: block;
+    }
+
+    /* Botões laterais */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 10px;
+      margin-top: -20px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-size: 24px;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      user-select: none;
+      transition: background-color 0.3s;
+      opacity: 0; /* Inicialmente invisível */
+      transition: opacity 0.3s; /* Transição suave para aparecer/desaparecer */
+    }
+
+    /* Mostrar botões quando o mouse está sobre o carrossel */
+    .carousel:hover .prev,
+    .carousel:hover .next {
+      opacity: 1;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    /* Navegação (bolinhas) */
+    .navigation {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    .navigation label {
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+      margin: 0 5px;
+      transition: background-color 0.3s;
+    }
+
+    #img1:checked ~ .navigation label[for="img1"],
+    #img2:checked ~ .navigation label[for="img2"],
+    #img3:checked ~ .navigation label[for="img3"] {
+      background-color: gray;
+    }
+
+.card {
+  background-color: #000; /* Fundo preto */
+  border: 2px solid #fff; /* Borda branca */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Sombra */ 
+  max-width: 1200px; /* Largura máxima */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  margin: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-1 {
+  background-color: #ffffff; /* Fundo preto */
+  border: 3px solid #000000; /* Borda branca */
+  border-radius: 10px; /* Bordas arredondadas */
+ box-shadow: 0 4px 6px rgb(255, 255, 255, 1); /* Sombra */ 
+  max-width: 850px; /* Largura máxima */
+  text-align: left; /* Alinhamento do texto à esquerda */
+  margin: 2%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo do texto dentro do card */
+.card h4 {
+  color: #fff; /* Cor do texto */
+  font-size: 22px; /* Tamanho da fonte */
+  margin: 0; /* Remover margem padrão */
+}
+
+.card-1 h4 {
+  color: #000000; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 0; /* Remover margem padrão */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Intensifica a sombra */
+}
+
+.card-1:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card em 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Intensifica a sombra */
+}
+
+
+
+footer {
+    background-color: var(--primary-color);
+}
+
+.word {
+      display: inline-block;
+      font-size: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .word:hover {
+      transform: scale(1.2);
+    }
+
+ .img-expand {
+      width: 80px;
+      transition: transform 0.3s ease;
+    }
+
+    .img-expand:hover {
+      transform: scale(1.2);
+    }
+
+article{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+article#primeiro{
+    padding-top: 30px;
+}
+
+.navbar-brand {
+    margin-left: auto;
+    margin-right: 50px;
+    font-size: 40px;
+}
+
+.offcanvas {
+    background-color: var(--primary-color);
+}
+
+.navbar-toggle-icon {
+    filter: invert(1);
+}
+
+.carousel-inner {
+    margin-top: -20px; 
+}
+
+.carousel-item img {
+    border-radius: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: auto;
+    bottom: 20px; 
+}
+
+.carousel-controls {
+    position: relative;
+    width: 30%;
+    margin: 90px auto 0;
+}
+
+/*------------------------------*/
+
+h2{
+    color: #1E8793;
+    font-weight: 700;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.content {
+    margin: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wx-fit {
+    max-width: fit-content;
+}
+
+.mw-100 {
+	max-width: 100%;
+}
+
+p {
+    text-align: justify;
+    text-indent: 15px;
+}
+
+p.center {
+    text-align: center;
+    text-indent: 15px;
+}
+
+/*-------------------------*/
+
+.bloco{
+    text-align: center;
+    padding: 15px;
+    border-radius: 7%;
+    border: 10px solid var(--primary-color);
+    box-shadow: 10px 10px;
+}
+
+.bloco * {
+    margin: 10px 0;
+}
+
+/*--------------------------*/
+
+.project-circle {
+    max-width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    justify-items: center;
+    align-items: center;
+    border: 8px solid black;
+    box-shadow: 16px 12px 0px 0px rgba(0,0,0,1);
+    aspect-ratio: 1;
+}
+
+.project-circle img {
+    width: 60%;
+}
+
+/* ---------------- */
+.input-pag8{
+  
+    width: 60%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 50px;
+  }
+  
+  .inputlarge-pag8{
+  	resize: none;
+    width: 60%;
+    height: 250px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  .form{
+    text-align: center;
+  }
+  
+  .cabeçalho{
+    margin: 0px;
+    margin-bottom: 5px;
+    text-align: left;
+    text-indent: 20%;
+    font-size: 15px;
+    color: #00A38F;
+  }
+  .row{
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  .col{ 
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  .botao{
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+		cursor: pointer;
+  }
+
+  a {
+  text-decoration: none; /* Remove o sublinhado */
+  outline: none; /* Remove o contorno de foco */
+}
+
+/* Contêiner pai para cada seção de toggle */
+/* Contêiner pai para cada seção de toggle */
+.toggle-section {
+  margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+/* Container para a linha de toggle e ícone */
+.toggle-container {
+  display: flex; /* Alinha os itens horizontalmente */
+  align-items: center; /* Alinha verticalmente no centro */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o item */
+}
+
+/* Estilo para o texto de toggle */
+.toggle {
+  font-size: 20px; /* Tamanho do texto */
+  color: #000; /* Cor do texto */
+  margin-right: 10px; /* Espaço entre o texto e o ícone */
+}
+
+/* Estilo para o texto adicional com transição suave ao entrar */
+.toggle-text {
+  max-height: 0; /* Inicialmente oculto com altura zero */
+  opacity: 0; /* Inicialmente invisível */
+  overflow: hidden; /* Oculta o texto que ultrapassa a altura máxima */
+  color: #000; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
+  padding-top: 0; /* Espaçamento interno inicial */
+  transition: max-height 0.5s ease, opacity 0.5s ease; /* Transição suave para altura e opacidade */
+}
+
+/* Quando o texto é exibido */
+.toggle-text.show {
+  max-height: 200px; /* Ajuste a altura máxima conforme necessário */
+  opacity: 1; /* Totalmente visível */
+  padding-top: 10px; /* Espaçamento interno ao exibir o texto */
+}
+
+/* Quando o texto é escondido */
+.toggle-text.hide {
+  max-height: 0; /* Altura para ocultar o texto imediatamente */
+  opacity: 0; /* Torna o texto invisível */
+  padding-top: 0; /* Remove o espaçamento interno */
+}
+
+/* Estilo para o ícone */
+.toggle-icon {
+  font-size: 20px; /* Tamanho do ícone */
+  transition: transform 0.5s ease; /* Transição suave para rotação */
+}
+
+/* Quando o texto está visível, o ícone muda */
+.toggle-text.show ~ .toggle-icon {
+  transform: rotate(180deg); /* Rotaciona o ícone para cima */
+}
+
+
+
+
+
+
+/* Estilo para o texto que pode ser clicado */
+.toggle {
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  color: #000; /* Cor do texto */
+  font-size: 20px; /* Tamanho da fonte */
+  display: block; /* Faz o span ocupar a linha inteira */
+  padding: 5px 0; /* Espaçamento interno */
+}
