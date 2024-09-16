@@ -16,27 +16,41 @@ html, body {
     height: 100%;
 }
 
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s forwards;
+ .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 20px;
+        }
+        .navbar-brand img {
+            height: 40px;
         }
 
-        .fade-in:nth-child(2) {
-            animation-delay: 0.5s;
-        }
+.title-text-1 {
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    /* Container do carrossel */
+  font-size: 85px;
 
-    /* Container do carrossel */
-    .carousel {
+}
+
+.title-text-2 {
+
+  font-size: 35px;
+
+}
+
+.about-me-title {
+  
+  font-size: 60px;
+
+}
+
+.about-me-container {
+
+  display: grid; 
+  grid-template-columns: 1.1fr 0.9fr; 
+  justify-content: center;
+
+}
+
+.carousel {
       position: relative;
       width: 400px; /* Largura do carrossel */
       height: 400px; /* Altura do carrossel (igual à largura para imagens quadradas) */
@@ -101,6 +115,224 @@ html, body {
     .next {
       right: 0;
     }
+
+@media screen and (max-width: 1300px) {
+    .title-text-1 {
+        font-size: 60px; 
+    }
+
+    .title-text-2 {
+
+      font-size: 20px;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .title-text-1 {
+        font-size: 40px; 
+    }
+
+    .title-text-2 {
+
+      font-size: 18px;
+
+    }
+
+    .about-me-title {
+
+      font-size: 40px;
+
+    }
+
+    .about-me-container {
+
+      display: flex;
+      flex-direction: column;
+
+    }
+    
+}
+
+/* Regras gerais */
+.about-me-text {
+  color: #ccc;
+  text-decoration: solid;
+  font-size: 22px;
+}
+
+.img-skills {
+
+  max-width: 120px; 
+  border-right: 2px solid black;
+
+}
+
+.arrow {
+
+  max-width: 60px;
+}
+
+.text-sk {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: solid;
+}
+
+/* Regras específicas para telas menores */
+@media screen and (max-width: 620px) {
+  .title-text-1 {
+    font-size: 30px; 
+  }
+
+  .title-text-2 {
+    font-size: 14px;
+  }
+
+  .about-me-text {
+    font-size: 16px;
+  }
+
+  .img-skills {
+
+  max-width: 100px; 
+  border-right: 0px solid black;
+  
+  }
+
+  .footer-logo {
+    max-width: 200px;
+  }
+
+  .card-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Garante que o card ocupe toda a largura disponível */
+    margin-bottom: 20px; /* Adiciona um espaço entre os cartões */
+  }
+  
+  .card-1 img {
+    margin-bottom: 10px; /* Adiciona um espaço abaixo da imagem */
+  }
+
+  .card-1 h4 {
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+  }
+  
+  section#Habilidades {
+    padding: 20px; /* Ajusta o padding para telas menores */
+  }
+
+  .arrow {
+  
+  max-width: 30px;
+}
+
+.footer-logo {
+  max-width: 100px;
+}
+
+.carousel {
+      position: relative;
+      width: 300px; /* Largura do carrossel */
+      height: 300px; /* Altura do carrossel (igual à largura para imagens quadradas) */
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      background-color: #6e4b4b00; /* Adiciona um fundo para garantir visibilidade dos botões */
+    }
+
+ .carousel img {
+      width: 300px; /* Largura das imagens */
+      height: 300px; /* Altura das imagens (igual à largura para manter o formato quadrado) */
+      display: none;
+      object-fit: cover; /* Ajusta o tamanho da imagem para preencher o contêiner */
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+ .title-text-1 {
+    font-size: 25px; 
+  }
+
+  .title-text-2 {
+    font-size: 12px;
+  }
+
+  .text-sk {
+  font-size: 13px;
+  color: #000000;
+  text-decoration: solid;
+  }
+
+}
+
+@media screen and (max-width: 470px) {
+
+ .title-text-1 {
+    font-size: 22px; 
+  }
+
+  .title-text-2 {
+    font-size: 10px;
+  }
+
+  .text-sk {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: solid;
+  }
+
+  .about-me-text {
+    font-size: 14px;
+  }
+
+  .carousel {
+      position: relative;
+      width: 250px; /* Largura do carrossel */
+      height: 250px; /* Altura do carrossel (igual à largura para imagens quadradas) */
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      background-color: #6e4b4b00; /* Adiciona um fundo para garantir visibilidade dos botões */
+
+    }
+
+ .carousel img {
+      width: 250px; /* Largura das imagens */
+      height: 250px; /* Altura das imagens (igual à largura para manter o formato quadrado) */
+      display: none;
+      object-fit: cover; /* Ajusta o tamanho da imagem para preencher o contêiner */
+    }
+
+}
+
+
+
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .fade-in:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    /* Container do carrossel */
+
+    /* Container do carrossel */
+    
 
     /* Navegação (bolinhas) */
     .navigation {
@@ -216,9 +448,10 @@ article#primeiro{
     background-color: var(--primary-color);
 }
 
-.navbar-toggle-icon {
+.navbar-toggler-icon {
     filter: invert(1);
 }
+
 
 .carousel-inner {
     margin-top: -20px; 
