@@ -116,6 +116,10 @@ html, body {
       right: 0;
     }
 
+    .footer-logo {
+      max-width: 200px;
+    }
+
 @media screen and (max-width: 1300px) {
     .title-text-1 {
         font-size: 60px; 
@@ -181,6 +185,13 @@ html, body {
 
 /* Regras específicas para telas menores */
 @media screen and (max-width: 620px) {
+
+.title-text-1,
+  .title-text-2 {
+    white-space: normal; /* Permite quebra automática de linha */
+    word-break: break-all; /* Quebra de palavras longas */
+  }
+
   .title-text-1 {
     font-size: 30px; 
   }
