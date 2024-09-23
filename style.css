@@ -117,7 +117,7 @@ html, body {
     }
 
     .footer-logo {
-      max-width: 200px;
+      max-width: 140px;
     }
 
 @media screen and (max-width: 1300px) {
@@ -212,7 +212,7 @@ html, body {
   }
 
   .footer-logo {
-    max-width: 200px;
+    max-width: 140px;
   }
 
   .card-1 {
@@ -415,6 +415,14 @@ html, body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Intensifica a sombra */
 }
 
+.txt-expand {
+      transition: transform 0.3s ease;
+    }
+
+    .txt-expand:hover {
+      transform: scale(1.2);
+    }
+
 
 
 footer {
@@ -432,7 +440,7 @@ footer {
     }
 
  .img-expand {
-      width: 80px;
+     width: 80px;
       transition: transform 0.3s ease;
     }
 

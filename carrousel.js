@@ -16,4 +16,4 @@ function prevSlide() {
 // Função para auto slide a cada 3 segundos
 setInterval(() => {
   nextSlide();
-}, 5000);
+}, 8000);
